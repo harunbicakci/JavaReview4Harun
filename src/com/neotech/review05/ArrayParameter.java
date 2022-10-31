@@ -18,10 +18,38 @@ public class ArrayParameter {
 		int result = ap.largestNumber(array);
 		System.out.println("Largest number in the array --> " + result);
 		
+		System.out.println("-----------------------------");
+		
+		result = ap.sumArray(array);
+		System.out.println("The sum of the array --> " + result);
+		
+		double d = ap.avrArray(array);
+		System.out.println("The average of the array --> " + d);
+		
 		
 	}
 	
-	public int largestNumber(int[] arr){
+	
+	protected int sumArray (int[] arr) {
+		int sum = 0;
+		for (int el : arr) {
+			sum += el;
+		}
+		
+		return sum;
+	}
+	
+	private double avrArray (int[] arr) {
+		
+		double sum = sumArray(arr);
+		double avr = sum / arr.length;
+		
+		return avr;
+	}
+	
+
+	
+ 	public int largestNumber(int[] arr){
 		int largest = arr[0];
 		for ( int el : arr) {
 			if ( largest < el)
