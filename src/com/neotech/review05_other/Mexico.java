@@ -1,4 +1,4 @@
-package Review05_other;
+package com.neotech.review05_other;
 
 import com.neotech.review05.USA;
 
